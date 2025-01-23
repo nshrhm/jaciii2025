@@ -1,8 +1,10 @@
-data/
 .RData
 .Rhistory
 .lintr
 *.Rproj
 .Rproj.user/
+build.R
+data/
+output/
 prompt.md
 memo.md

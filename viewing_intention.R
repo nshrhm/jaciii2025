@@ -75,7 +75,6 @@ main_viewing_intention <- function(input_file, output_dir, lang = "ja", verbose 
 
   if (verbose) message("必要なディレクトリを作成...")
   # 出力ディレクトリ構造を設定
-  output_dir <- paste0("output/", lang)
   plots_dir <- file.path(output_dir, "plots")
   data_dir <- file.path(output_dir, "data")
   dirs <- c(plots_dir, data_dir)

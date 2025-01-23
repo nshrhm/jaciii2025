@@ -23,18 +23,19 @@
 
 ## 使い方
 
-1. **データの準備**
-   - `data/data_all.csv` にVAS評価データを配置します
-   - データには各質問項目（Q1〜Q5）の評価値と国（Japan/Singapore）が含まれている必要があります
+1. **サンプルデータによる動作確認**
+   - `create_sample_data.R` が自動的にサンプルデータを生成します
+   - 生成されるデータには各質問項目（Q1〜Q5）の評価値と国（Japan/Singapore）が含まれます
+   - クラスタリング結果を反映した特性を持つデータが生成されます
 
 2. **分析の実行**
    ```R
-   # build.Rを実行します
-   source("build.R")
+   # build_sample.Rを実行してサンプルデータの分析を行います
+   source("build_sample.R")
    ```
 
 3. **出力結果**
-   - `output/ja/` (日本語) または `output/en/` (英語) に以下の結果が出力されます：
+   - `sample_output/ja/` (日本語) または `sample_output/en/` (英語) に以下の結果が出力されます：
      - `plots/`: 各種グラフ（PDF・SVG形式）
      - `data/`: 分析結果のCSVファイル
 
@@ -68,5 +69,5 @@ install.packages(c("tidyverse", "ggbeeswarm", "e1071", "scales"))
 ```
 
 ## 注意事項
-- 分析結果は `output` ディレクトリに自動的に保存されます
-- 言語設定は `build.R` の `lang` パラメータで変更可能です（"ja"または"en"）
+- 分析結果は `sample_output` ディレクトリに自動的に保存されます
+- 言語設定は `build_sample.R` の `lang` パラメータで変更可能です（"ja"または"en"）
