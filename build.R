@@ -1,5 +1,5 @@
 # 言語設定 ("ja" または "en" を指定)
-lang <- "ja"
+lang <- "en"
 data_file <- "data/data_all.csv"
 output_dir <- file.path("output", lang)
 
