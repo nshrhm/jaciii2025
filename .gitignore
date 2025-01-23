@@ -4,3 +4,5 @@ data/
 .lintr
 *.Rproj
 .Rproj.user/
+prompt.md
+memo.md
