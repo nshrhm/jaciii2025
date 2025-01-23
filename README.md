@@ -7,7 +7,7 @@
 1. **プロジェクトのダウンロード**
    ```bash
    # GitHubからプロジェクトをクローン
-   git clone https://github.com/yourusername/jaciii2025r.git
+   git clone https://github.com/nshrhm/jaciii2025r.git
    
    # または
    # GitHubの「Code」ボタン → 「Download ZIP」からZIPファイルをダウンロードして解凍
