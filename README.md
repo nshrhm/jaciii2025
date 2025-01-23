@@ -24,8 +24,8 @@
    - `R/viewing_intention.R`: 視聴意欲分析用スクリプト
    - `R/utils.R`: ユーティリティ関数
    - `R/translation_config.R`: 翻訳設定
+   - `R/create_sample_data.R`: サンプルデータ生成スクリプト
    - `build_sample.R`: メインの実行スクリプト
-   - `create_sample_data.R`: サンプルデータ生成スクリプト
 
 ## 概要
 
