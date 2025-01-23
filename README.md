@@ -5,23 +5,27 @@
 ## インストール方法
 
 1. **プロジェクトのダウンロード**
+   - R環境でのインストール
+   ```r
+   devtools::install_github("nshrhm/jaciii2025")
+   ```
+   - コマンドでのインストール
    ```bash
    # GitHubからプロジェクトをクローン
-   git clone https://github.com/nshrhm/jaciii2025r.git
-   
-   # または
-   # GitHubの「Code」ボタン → 「Download ZIP」からZIPファイルをダウンロードして解凍
+   git clone https://github.com/nshrhm/jaciii2025.git
    ```
+   - ブラウザからダウンロード
+   - GitHubの「Code」ボタン → 「Download ZIP」からZIPファイルをダウンロードして解凍
 
 2. **必要なファイル**
    以下のファイルが必要です：
-   - `basic_trend.R`: 基本統計分析用スクリプト
-   - `fuzzy_cmeans.R`: クラスター分析用スクリプト
-   - `viewing_intention.R`: 視聴意欲分析用スクリプト
+   - `R/basic_trend.R`: 基本統計分析用スクリプト
+   - `R.fuzzy_cmeans.R`: クラスター分析用スクリプト
+   - `R/viewing_intention.R`: 視聴意欲分析用スクリプト
+   - `R/utils.R`: ユーティリティ関数
+   - `R/translation_config.R`: 翻訳設定
    - `build_sample.R`: メインの実行スクリプト
    - `create_sample_data.R`: サンプルデータ生成スクリプト
-   - `utils.R`: ユーティリティ関数
-   - `translation_config.R`: 翻訳設定
 
 ## 概要
 
