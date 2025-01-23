@@ -6,8 +6,8 @@ suppressPackageStartupMessages({
   # library(ggbeeswarm)
 })
 
-source("utils.R")
-source("translation_config.R")
+source("R/utils.R")
+source("R/translation_config.R")
 
 #' @title Fuzzy c-means クラスタリング実行と可視化
 #' @description ファジィc-meansクラスタリングを実行し、結果を可視化する関数です

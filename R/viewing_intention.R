@@ -5,8 +5,8 @@ suppressPackageStartupMessages({
 })
 
 # utils.Rからヘルパー関数をロード
-source("utils.R")
-source("translation_config.R")
+source("R/utils.R")
+source("R/translation_config.R")
 
 #' @title 映画観覧意欲分析のメイン実行関数
 #' @description

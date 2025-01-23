@@ -5,8 +5,8 @@ suppressPackageStartupMessages({
 })
 
 # utils.Rからヘルパー関数をロード
-source("utils.R")
-source("translation_config.R")
+source("R/utils.R")
+source("R/translation_config.R")
 
 #' @title メイン実行関数の改善版
 #' @param input_file 入力ファイルパス
