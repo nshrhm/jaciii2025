@@ -2,6 +2,27 @@
 
 このリポジトリは、映画評価データの分析を行うRプロジェクトです。Visual Analog Scale (VAS)を用いた映画の印象評価データを分析し、視覚化を行います。
 
+## インストール方法
+
+1. **プロジェクトのダウンロード**
+   ```bash
+   # GitHubからプロジェクトをクローン
+   git clone https://github.com/yourusername/jaciii2025r.git
+   
+   # または
+   # GitHubの「Code」ボタン → 「Download ZIP」からZIPファイルをダウンロードして解凍
+   ```
+
+2. **必要なファイル**
+   以下のファイルが必要です：
+   - `basic_trend.R`: 基本統計分析用スクリプト
+   - `fuzzy_cmeans.R`: クラスター分析用スクリプト
+   - `viewing_intention.R`: 視聴意欲分析用スクリプト
+   - `build_sample.R`: メインの実行スクリプト
+   - `create_sample_data.R`: サンプルデータ生成スクリプト
+   - `utils.R`: ユーティリティ関数
+   - `translation_config.R`: 翻訳設定
+
 ## 概要
 
 本プロジェクトでは、以下の3つの主要な分析を行います：
