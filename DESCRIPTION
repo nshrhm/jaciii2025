@@ -3,7 +3,7 @@ Title: Viewing Intention Analysis using VAS and FCM
 Version: 0.1.0
 Authors@R:
     person("Naruki", "Shirahama", email = "nshirahama@ieee.org", role = c("aut", "cre"))
-Description: This package provides functions for analyzing Japanese audience data, including clustering, trend analysis, and viewing intention modeling.
+Description: This package provides functions for analyzing Japanese audience data, including clustering, trend analysis, and viewing intention modeling. The package includes a comprehensive manual (jaciii2025.pdf) detailing the methodology and implementation.
 License: MIT
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -15,4 +15,6 @@ Imports:
     ggplot2,
     dplyr,
     purrr,
-    tibble
+    tibble,
+    e1071,
+    scales
