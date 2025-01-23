@@ -159,12 +159,7 @@ create_coefficient_plot <- function(analysis_results, lang = "ja") {
       x = get_translation("axis_variable", "influence_analysis", lang),
       y = get_translation("axis_std_coefficient", "influence_analysis", lang)
     ) +
-    theme_minimal() +
-    theme(
-      plot.title = element_text(hjust = 0.5),
-      axis.text = element_text(size = 10),
-      axis.title = element_text(size = 12)
-    )
+    apply_common_theme()
 }
 
 #' @title 相関プロットの生成関数
@@ -242,12 +237,7 @@ create_correlation_plot <- function(analysis_results, lang = "ja") {
       y = get_translation("axis_variable", "influence_analysis", lang),
       fill = get_translation("correlation", "influence_analysis", lang)
     ) +
-    theme_minimal() +
-    theme(
-      plot.title = element_text(hjust = 0.5),
-      axis.text.x = element_text(angle = 45, hjust = 1),
-      axis.title = element_text(size = 12)
-    )
+    apply_common_theme(rotate_x_labels = TRUE)
 }
 
 #' @title 観覧意欲への影響要因の統計分析

@@ -232,3 +232,26 @@ save_results <- function(data, file_path, type = NULL) {
     }
   )
 }
+
+#' @title プロットの共通テーマを設定する関数
+#' @description ggplotオブジェクトに対して、統一されたテーマ設定を適用します
+#' @param p ggplotオブジェクト
+#' @param base_size ベースとなるフォントサイズ（デフォルト：14）
+#' @param rotate_x_labels X軸ラベルを45度回転するかどうか（デフォルト：FALSE）
+#' @return テーマが適用されたggplotオブジェクト
+#' @export
+apply_common_theme <- function(base_size = 14, rotate_x_labels = FALSE) {
+  common_theme <- theme(
+    text = element_text(family = "sans"),
+    plot.title = element_text(size = rel(1.2), hjust = 0.5),
+    axis.title = element_text(size = rel(1.1)),
+    axis.text = element_text(size = rel(1.0)),
+    axis.text.x = if (rotate_x_labels) element_text(angle = 45, hjust = 1) else element_text(),
+    legend.title = element_text(size = rel(1.0)),
+    legend.text = element_text(size = rel(0.9)),
+    panel.grid.minor = element_blank(),
+    plot.margin = margin(t = 10, r = 10, b = 10, l = 10),
+    legend.position = "right"
+  )
+  theme_minimal(base_size = base_size) + common_theme
+}

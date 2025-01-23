@@ -220,13 +220,7 @@ create_vas_plot <- function(data, lang = "ja", country_filter = NULL) {
       x = get_translation("x_label", "plot_labels", lang),
       y = get_translation("y_label", "plot_labels", lang)
     ) +
-    theme_minimal() +
-    theme(
-      text = element_text(family = "sans"),
-      axis.text.x = element_text(angle = 45, hjust = 1),
-      plot.title = element_text(size = 14),
-      axis.title = element_text(size = 12)
-    )
+    apply_common_theme(rotate_x_labels = TRUE)
 
   return(p)
 }
@@ -273,7 +267,8 @@ create_vas_plots_comparison <- function(data, lang = "ja") {
     scale_y_continuous(
       limits = c(0, 1.00),
       breaks = seq(0, 1.00, 0.20)
-    )
+    ) +
+    apply_common_theme(rotate_x_labels = TRUE)
   return(p)
 }
 

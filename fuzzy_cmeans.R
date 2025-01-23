@@ -9,13 +9,21 @@ suppressPackageStartupMessages({
 source("utils.R")
 source("translation_config.R")
 
-#' @title Fuzzy c-means クラスタリング実行と可視化（改訂版）
-#' @param data 生データ
-#' @param k クラスター数（デフォルト：4）
-#' @param m ファジィ化パラメータ
-#' @param max_iter 最大反復回数
-#' @param lang 言語コード
-#' @return 分析結果のリスト
+#' @title Fuzzy c-means クラスタリング実行と可視化
+#' @description ファジィc-meansクラスタリングを実行し、結果を可視化する関数です
+#' @param data アンケートの生データ。Q列を含むデータフレームである必要があります
+#' @param k クラスター数（デフォルト：4）。データをグループ化する際の目標クラスター数を指定します
+#' @param m ファジィ化パラメータ。1に近いほどクリスプなクラスタリング、大きいほどファジィなクラスタリングとなります
+#' @param max_iter 最大反復回数。アルゴリズムが収束しない場合の打ち切り回数を指定します
+#' @param lang 言語コード。出力メッセージやラベルの言語を指定します（例：'ja'は日本語）
+#' @return 以下の要素を含むリスト：
+#' \itemize{
+#'   \item clusters - クラスタリング結果（メンバーシップ行列、中心点など）
+#'   \item plot - クラスタリング結果の散布図
+#'   \item data - プロット用の加工済みデータ
+#'   \item centers - クラスター中心点の座標
+#'   \item labels - クラスターのラベル
+#' }
 perform_clustering <- function(data, k = 4, m = 4, max_iter = 1000, lang = "ja") {
   tryCatch(
     {
@@ -34,6 +42,13 @@ perform_clustering <- function(data, k = 4, m = 4, max_iter = 1000, lang = "ja")
       # クラスタリングの実行
       set.seed(123)
       message("\nクラスタリングを開始")
+      # クラスタリングの実行
+      # centers: クラスター数
+      # m: ファジィ化パラメータ（1に近いほどクリスプに、大きいほどファジィに）
+      # iter.max: 最大反復回数
+      # dist: 距離の計算方法（"euclidean"はユークリッド距離）
+      # method: クラスタリング手法（"cmeans"はファジィc-means）
+      # verbose: クラスタリング過程の詳細表示
       fuzzy_result <- cmeans(
         analysis_data,
         centers = k,
@@ -41,7 +56,7 @@ perform_clustering <- function(data, k = 4, m = 4, max_iter = 1000, lang = "ja")
         iter.max = max_iter,
         dist = "euclidean",
         method = "cmeans",
-        verbose = TRUE # クラスタリング過程の詳細を表示
+        verbose = TRUE
       )
 
       # メンバーシップ行列の検証
@@ -139,7 +154,7 @@ perform_clustering <- function(data, k = 4, m = 4, max_iter = 1000, lang = "ja")
           alpha = get_translation("membership", "cluster_labels", lang)
         ) +
         scale_color_brewer(palette = "Set2") +
-        theme_minimal()
+        apply_common_theme()
 
       message("\n=== クラスタリングが正常に完了しました ===")
 
@@ -162,13 +177,19 @@ perform_clustering <- function(data, k = 4, m = 4, max_iter = 1000, lang = "ja")
   )
 }
 
-#' @title クラスターごとのVASプロット生成（改訂版）
-#' @param data 長形式データ
-#' @param cluster_info クラスター情報のデータフレーム
-#' @param plots_dir プロット保存ディレクトリ
-#' @param lang 言語コード
-#' @param k クラスター数（デフォルト：4）
-#' @return ggplotオブジェクトのリスト
+#' @title クラスターごとのVASプロット生成
+#' @description クラスタリング結果に基づいて、各クラスターのVAS（Visual Analog Scale）評価を可視化します
+#' @param data 長形式データ。question列とvalue列を含む、VAS評価の詳細データ
+#' @param cluster_info クラスター情報のデータフレーム。ID、cluster、membershipなどの列を含む
+#' @param plots_dir プロット保存ディレクトリ。PDFとSVG形式で保存されます
+#' @param lang 言語コード。出力メッセージやラベルの言語を指定します（例：'ja'は日本語）
+#' @param k クラスター数（デフォルト：4）。データの分割数を指定します
+#' @return 以下の要素を含むggplotオブジェクトのリスト：
+#' \itemize{
+#'   \item 各クラスターのバイオリンプロット
+#'   \item 箱ひげ図
+#'   \item ジッタープロットによる個別データ点
+#' }
 create_cluster_vas_plots <- function(data, cluster_info, plots_dir, lang = "ja", k = 4) {
   tryCatch(
     {
@@ -239,6 +260,7 @@ create_cluster_vas_plots <- function(data, cluster_info, plots_dir, lang = "ja",
             geom_violin(alpha = 0.4) +
             geom_boxplot(width = 0.2, alpha = 0.4) +
             geom_jitter(alpha = 0.4, width = 0.2, height = 0) +
+            apply_common_theme(rotate_x_labels = TRUE) +
             labs(
               title = sprintf(
                 "%s: %s",
@@ -247,13 +269,6 @@ create_cluster_vas_plots <- function(data, cluster_info, plots_dir, lang = "ja",
               ),
               x = get_translation("x_label", "plot_labels", lang),
               y = get_translation("y_label", "plot_labels", lang)
-            ) +
-            theme_minimal() +
-            theme(
-              text = element_text(family = "sans"),
-              axis.text.x = element_text(angle = 45, hjust = 1),
-              plot.title = element_text(size = 14),
-              axis.title = element_text(size = 12)
             )
         })
 
@@ -296,12 +311,19 @@ create_cluster_vas_plots <- function(data, cluster_info, plots_dir, lang = "ja",
   )
 }
 
-#' @title メイン実行関数の改善版
-#' @param input_file 入力ファイルパス
-#' @param output_dir 出力ディレクトリ
-#' @param lang 言語コード
-#' @param verbose デバッグ情報の表示フラグ
-#' @param benchmark ベンチマーク実行フラグ
+#' @title ファジィクラスタリング分析の実行と結果の可視化
+#' @description データの読み込みから前処理、クラスタリング、結果の可視化までの一連の処理を実行します
+#' @param input_file 入力ファイルパス。分析対象のデータファイルを指定します
+#' @param output_dir 出力ディレクトリ。結果ファイルやプロットが保存されます
+#' @param lang 言語コード。出力メッセージやラベルの言語を指定します（例：'ja'は日本語）
+#' @param verbose デバッグ情報の表示フラグ。TRUEの場合、詳細な処理情報を出力します
+#' @param benchmark ベンチマーク実行フラグ。TRUEの場合、処理時間の計測を行います
+#' @return NULL。結果は指定されたディレクトリに保存されます：
+#' \itemize{
+#'   \item クラスタリング結果のCSVファイル
+#'   \item クラスタリング結果の散布図（PDF/SVG）
+#'   \item クラスターごとのVASプロット（PDF/SVG）
+#' }
 main_fuzzy_cmeans <- function(input_file, output_dir, lang = "ja", verbose = FALSE, benchmark = FALSE) {
   # クラスター分析
   # 開始時刻を記録
@@ -377,6 +399,7 @@ main_fuzzy_cmeans <- function(input_file, output_dir, lang = "ja", verbose = FAL
   )
 
   # クラスター情報の処理
+  cluster_info <- NULL
   if (!is.null(cluster_results) && !is.null(cluster_results$clusters)) {
     cluster_info <- tryCatch(
       {
@@ -561,8 +584,11 @@ main_fuzzy_cmeans <- function(input_file, output_dir, lang = "ja", verbose = FAL
               filename_base <- file.path(plots_dir, sprintf("vas_cluster_%s_evaluation", safe_name))
 
               # クラスターラベルに対応するプロットのインデックスを取得
-              plot_index <- which(sapply(data_with_clusters %>% group_split(cluster), function(df) {
-                unique(df$cluster) == cluster_label
+              plot_index <- which(sapply(seq_along(plots), function(j) {
+                cluster_data <- data_with_clusters %>%
+                  group_split(cluster) %>%
+                  .[[j]]
+                unique(cluster_data$cluster) == cluster_label
               }))
 
               if (length(plot_index) == 1) {
