@@ -17,4 +17,7 @@ Imports:
     purrr,
     tibble,
     e1071,
-    scales
+    scales,
+    svglite,
+    car,
+    Cairo
