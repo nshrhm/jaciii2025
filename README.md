@@ -94,6 +94,19 @@
 install.packages(c("tidyverse", "ggbeeswarm", "e1071", "scales"))
 ```
 
+## アンインストール方法
+
+1. **R環境からのアンインストール**
+```r
+remove.packages("jaciii2025")
+```
+
+2. **GitHubからクローンした場合**
+- プロジェクトディレクトリを削除してください
+```bash
+rm -rf jaciii2025
+```
+
 ## 注意事項
 - 分析結果は `sample_output` ディレクトリに自動的に保存されます
 - 言語設定は `build_sample.R` の `lang` パラメータで変更可能です（"ja"または"en"）
