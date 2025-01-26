@@ -372,7 +372,7 @@
 <text transform='translate(268.62,424.70) rotate(-45)' text-anchor='end' style='font-size: 14.00px; font-weight: 500;fill: #4D4D4D; font-family: "Arial";' textLength='28.32px' lengthAdjust='spacingAndGlyphs'>幸せ</text>
 <text transform='translate(393.12,424.70) rotate(-45)' text-anchor='end' style='font-size: 14.00px; font-weight: 500;fill: #4D4D4D; font-family: "Arial";' textLength='28.32px' lengthAdjust='spacingAndGlyphs'>喜び</text>
 <text transform='translate(517.62,424.70) rotate(-45)' text-anchor='end' style='font-size: 14.00px; font-weight: 500;fill: #4D4D4D; font-family: "Arial";' textLength='28.32px' lengthAdjust='spacingAndGlyphs'>怒り</text>
-<text transform='translate(642.12,424.70) rotate(-45)' text-anchor='end' style='font-size: 14.00px; font-weight: 500;fill: #4D4D4D; font-family: "Arial";' textLength='55.99px' lengthAdjust='spacingAndGlyphs'>視聴意図</text>
+<text transform='translate(642.12,424.70) rotate(-45)' text-anchor='end' style='font-size: 14.00px; font-weight: 500;fill: #4D4D4D; font-family: "Arial";' textLength='55.99px' lengthAdjust='spacingAndGlyphs'>観覧意図</text>
 <text x='386.33' y='491.07' text-anchor='middle' style='font-size: 15.40px; font-weight: 500; font-family: "Arial";' textLength='61.57px' lengthAdjust='spacingAndGlyphs'>質問項目</text>
 <text transform='translate(20.52,221.66) rotate(-90)' text-anchor='middle' style='font-size: 15.40px; font-weight: 500; font-family: "Arial";' textLength='46.18px' lengthAdjust='spacingAndGlyphs'>評価値</text>
 <text x='386.33' y='21.48' text-anchor='middle' style='font-size: 16.80px; font-weight: 500; font-family: "Arial";' textLength='180.76px' lengthAdjust='spacingAndGlyphs'>映画の印象評価（VAS）</text>
