@@ -60,10 +60,10 @@ TRANSLATIONS <- list(
     # 質問項目（アンケートの各設問）
     "questions" = list(
       "Q1" = "ワクワク感",
-      "Q2" = "面白さ",
+      "Q2" = "幸せ",
       "Q3" = "喜び",
       "Q4" = "怒り",
-      "Q5" = "観覧意欲"
+      "Q5" = "視聴意図"
     ),
 
     # プロットのラベル（グラフの題名や軸ラベルなど）
@@ -125,15 +125,15 @@ TRANSLATIONS <- list(
     # 感情カテゴリーのラベル
     "emotion_categories" = list(
       "excitement" = "ワクワク感",
-      "interest" = "面白さ",
+      "happiness" = "幸せ",
       "joy" = "喜び",
       "anger" = "怒り",
-      "intention" = "観覧意欲"
+      "intention" = "観覧意図"
     ),
 
     # 影響分析関連のラベル
     "influence_analysis" = list(
-      "influence_title" = "観覧意欲への影響分析",
+      "influence_title" = "観覧意図への影響分析",
       "variable" = "評価項目",
       "estimate" = "推定値",
       "std_estimate" = "標準化係数",
@@ -151,17 +151,17 @@ TRANSLATIONS <- list(
       "r_squared" = "決定係数",
       "adj_r_squared" = "自由度調整済み決定係数",
       "f_statistic" = "F統計量",
-      "coefficient_plot_title" = "観覧意欲への影響度（標準化係数）",
+      "coefficient_plot_title" = "観覧意図への影響度（標準化係数）",
       "coefficient_plot_subtitle" = "国別分析：%s",
       "correlation_plot_title" = "相関行列ヒートマップ",
       "correlation_plot_subtitle" = "国別分析：%s",
       "axis_variable" = "評価項目",
       "axis_std_coefficient" = "標準化係数",
       "excitement" = "ワクワク感 (Q1)",
-      "interest" = "面白さ (Q2)",
+      "happiness" = "幸せ (Q2)",
       "joy" = "喜び (Q3)",
       "anger" = "怒り (Q4)",
-      "intention" = "観覧意欲 (Q5)"
+      "intention" = "観覧意図 (Q5)"
     )
   ),
   "en" = list(
@@ -185,7 +185,7 @@ TRANSLATIONS <- list(
     # Questions
     "questions" = list(
       "Q1" = "Excitement",
-      "Q2" = "Interest",
+      "Q2" = "happiness",
       "Q3" = "Joy",
       "Q4" = "Anger",
       "Q5" = "Viewing Intention"
@@ -250,7 +250,7 @@ TRANSLATIONS <- list(
     # Emotion Categories
     "emotion_categories" = list(
       "excitement" = "Excitement",
-      "interest" = "Interest",
+      "happiness" = "Happiness",
       "joy" = "Joy",
       "anger" = "Anger",
       "intention" = "Viewing Intention"
@@ -283,7 +283,7 @@ TRANSLATIONS <- list(
       "axis_variable" = "Variables",
       "axis_std_coefficient" = "Standardized Coefficient",
       "excitement" = "Excitement (Q1)",
-      "interest" = "Interest (Q2)",
+      "happiness" = "Happiness (Q2)",
       "joy" = "Joy (Q3)",
       "anger" = "Anger (Q4)",
       "intention" = "Viewing Intention (Q5)"

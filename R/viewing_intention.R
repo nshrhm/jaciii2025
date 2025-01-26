@@ -8,9 +8,9 @@ suppressPackageStartupMessages({
 source("R/utils.R")
 source("R/translation_config.R")
 
-#' @title 映画観覧意欲分析のメイン実行関数
+#' @title 観覧意図分析のメイン実行関数
 #' @description
-#' CSVファイルから映画の印象評価データを読み込み、観覧意欲に影響を与える
+#' CSVファイルから映画の印象評価データを読み込み、観覧意図に影響を与える
 #' 要因を分析します。環境設定の初期化、データの前処理、統計分析を
 #' 一連の流れとして実行します。
 #'
@@ -25,7 +25,7 @@ source("R/translation_config.R")
 #' 1. 環境設定の初期化（フォント、ロケール等）
 #' 2. 出力ディレクトリの作成
 #' 3. データの読み込みと前処理
-#' 4. 観覧意欲の要因分析
+#' 4. 観覧意図の要因分析
 #'
 #' エラー処理：
 #' - 環境設定の初期化失敗
@@ -203,7 +203,7 @@ create_correlation_plot <- function(analysis_results, lang = "ja") {
   # 変数名を翻訳
   var_names <- c(
     get_translation("excitement", "influence_analysis", lang),
-    get_translation("interest", "influence_analysis", lang),
+    get_translation("happiness", "influence_analysis", lang),
     get_translation("joy", "influence_analysis", lang),
     get_translation("anger", "influence_analysis", lang),
     get_translation("intention", "influence_analysis", lang)
@@ -239,9 +239,9 @@ create_correlation_plot <- function(analysis_results, lang = "ja") {
     apply_common_theme(rotate_x_labels = TRUE)
 }
 
-#' @title 観覧意欲への影響要因の統計分析
+#' @title 観覧意図への影響要因の統計分析
 #' @description
-#' 映画の印象評価データを用いて、観覧意欲（Q5）に対する
+#' 映画の印象評価データを用いて、観覧意図（Q5）に対する
 #' 各評価項目（Q1-Q4）の影響度を分析します。
 #'
 #' @param data 分析用データフレーム（Q1-Q5の列を含む）
@@ -331,7 +331,7 @@ analyze_viewing_intention <- function(data, subset_country = NULL, lang = "en") 
     {
       var_names <- c(
         get_translation("excitement", "influence_analysis", lang),
-        get_translation("interest", "influence_analysis", lang),
+        get_translation("happiness", "influence_analysis", lang),
         get_translation("joy", "influence_analysis", lang),
         get_translation("anger", "influence_analysis", lang)
       )
