@@ -125,7 +125,7 @@ TRANSLATIONS <- list(
     # 感情カテゴリーのラベル
     "emotion_categories" = list(
       "excitement" = "ワクワク感",
-      "happiness" = "幸せ",
+      "joy_anger" = "喜び-怒り",
       "joy" = "喜び",
       "anger" = "怒り",
       "intention" = "観覧意図"
@@ -158,7 +158,7 @@ TRANSLATIONS <- list(
       "axis_variable" = "評価項目",
       "axis_std_coefficient" = "標準化係数",
       "excitement" = "ワクワク感 (Q1)",
-      "happiness" = "幸せ (Q2)",
+      "joy_anger" = "喜び-怒り (Q2)",
       "joy" = "喜び (Q3)",
       "anger" = "怒り (Q4)",
       "intention" = "観覧意図 (Q5)"
@@ -185,7 +185,7 @@ TRANSLATIONS <- list(
     # Questions
     "questions" = list(
       "Q1" = "Excitement",
-      "Q2" = "happiness",
+      "Q2" = "Joy-Anger",
       "Q3" = "Joy",
       "Q4" = "Anger",
       "Q5" = "Viewing Intention"
@@ -250,7 +250,7 @@ TRANSLATIONS <- list(
     # Emotion Categories
     "emotion_categories" = list(
       "excitement" = "Excitement",
-      "happiness" = "Happiness",
+      "joy_anger" = "Joy-Anger",
       "joy" = "Joy",
       "anger" = "Anger",
       "intention" = "Viewing Intention"
@@ -283,7 +283,7 @@ TRANSLATIONS <- list(
       "axis_variable" = "Variables",
       "axis_std_coefficient" = "Standardized Coefficient",
       "excitement" = "Excitement (Q1)",
-      "happiness" = "Happiness (Q2)",
+      "joy_anger" = "Joy-Anger (Q2)",
       "joy" = "Joy (Q3)",
       "anger" = "Anger (Q4)",
       "intention" = "Viewing Intention (Q5)"

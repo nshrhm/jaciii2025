@@ -203,7 +203,7 @@ create_correlation_plot <- function(analysis_results, lang = "ja") {
   # 変数名を翻訳
   var_names <- c(
     get_translation("excitement", "influence_analysis", lang),
-    get_translation("happiness", "influence_analysis", lang),
+    get_translation("joy_anger", "influence_analysis", lang),
     get_translation("joy", "influence_analysis", lang),
     get_translation("anger", "influence_analysis", lang),
     get_translation("intention", "influence_analysis", lang)
@@ -331,7 +331,7 @@ analyze_viewing_intention <- function(data, subset_country = NULL, lang = "en") 
     {
       var_names <- c(
         get_translation("excitement", "influence_analysis", lang),
-        get_translation("happiness", "influence_analysis", lang),
+        get_translation("joy_anger", "influence_analysis", lang),
         get_translation("joy", "influence_analysis", lang),
         get_translation("anger", "influence_analysis", lang)
       )

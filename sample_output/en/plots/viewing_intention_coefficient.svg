@@ -36,18 +36,18 @@
 <polyline points='542.03,458.46 542.03,31.69 ' style='stroke-width: 1.36; stroke: #EBEBEB; stroke-linecap: butt;' />
 <line x1='334.23' y1='458.46' x2='334.23' y2='31.69' style='stroke-width: 1.07; stroke: #7F7F7F; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;' />
 <circle cx='330.71' cy='295.88' r='3.56' style='stroke-width: 0.71; stroke: #4682B4; fill: #4682B4;' />
-<circle cx='505.18' cy='194.27' r='3.56' style='stroke-width: 0.71; stroke: #4682B4; fill: #4682B4;' />
-<circle cx='359.86' cy='92.66' r='3.56' style='stroke-width: 0.71; stroke: #4682B4; fill: #4682B4;' />
+<circle cx='505.18' cy='92.66' r='3.56' style='stroke-width: 0.71; stroke: #4682B4; fill: #4682B4;' />
+<circle cx='359.86' cy='194.27' r='3.56' style='stroke-width: 0.71; stroke: #4682B4; fill: #4682B4;' />
 <circle cx='505.27' cy='397.49' r='3.56' style='stroke-width: 0.71; stroke: #4682B4; fill: #4682B4;' />
 <polyline points='504.53,306.04 504.53,285.72 ' style='stroke-width: 1.07; stroke: #4682B4; stroke-linecap: butt;' />
 <polyline points='504.53,295.88 156.89,295.88 ' style='stroke-width: 1.07; stroke: #4682B4; stroke-linecap: butt;' />
 <polyline points='156.89,306.04 156.89,285.72 ' style='stroke-width: 1.07; stroke: #4682B4; stroke-linecap: butt;' />
-<polyline points='682.70,204.43 682.70,184.11 ' style='stroke-width: 1.07; stroke: #4682B4; stroke-linecap: butt;' />
-<polyline points='682.70,194.27 327.66,194.27 ' style='stroke-width: 1.07; stroke: #4682B4; stroke-linecap: butt;' />
-<polyline points='327.66,204.43 327.66,184.11 ' style='stroke-width: 1.07; stroke: #4682B4; stroke-linecap: butt;' />
-<polyline points='551.19,102.82 551.19,82.50 ' style='stroke-width: 1.07; stroke: #4682B4; stroke-linecap: butt;' />
-<polyline points='551.19,92.66 168.53,92.66 ' style='stroke-width: 1.07; stroke: #4682B4; stroke-linecap: butt;' />
-<polyline points='168.53,102.82 168.53,82.50 ' style='stroke-width: 1.07; stroke: #4682B4; stroke-linecap: butt;' />
+<polyline points='682.70,102.82 682.70,82.50 ' style='stroke-width: 1.07; stroke: #4682B4; stroke-linecap: butt;' />
+<polyline points='682.70,92.66 327.66,92.66 ' style='stroke-width: 1.07; stroke: #4682B4; stroke-linecap: butt;' />
+<polyline points='327.66,102.82 327.66,82.50 ' style='stroke-width: 1.07; stroke: #4682B4; stroke-linecap: butt;' />
+<polyline points='551.19,204.43 551.19,184.11 ' style='stroke-width: 1.07; stroke: #4682B4; stroke-linecap: butt;' />
+<polyline points='551.19,194.27 168.53,194.27 ' style='stroke-width: 1.07; stroke: #4682B4; stroke-linecap: butt;' />
+<polyline points='168.53,204.43 168.53,184.11 ' style='stroke-width: 1.07; stroke: #4682B4; stroke-linecap: butt;' />
 <polyline points='683.70,407.66 683.70,387.33 ' style='stroke-width: 1.07; stroke: #4682B4; stroke-linecap: butt;' />
 <polyline points='683.70,397.49 326.84,397.49 ' style='stroke-width: 1.07; stroke: #4682B4; stroke-linecap: butt;' />
 <polyline points='326.84,407.66 326.84,387.33 ' style='stroke-width: 1.07; stroke: #4682B4; stroke-linecap: butt;' />
@@ -55,8 +55,8 @@
 <g clip-path='url(#cpMC4wMHw3MjAuMDB8MC4wMHw1MDQuMDA=)'>
 <text x='124.27' y='402.29' text-anchor='end' style='font-size: 14.00px; font-weight: 500;fill: #4D4D4D; font-family: "Arial";' textLength='64.61px' lengthAdjust='spacingAndGlyphs'>Anger (Q4)</text>
 <text x='124.27' y='300.68' text-anchor='end' style='font-size: 14.00px; font-weight: 500;fill: #4D4D4D; font-family: "Arial";' textLength='97.30px' lengthAdjust='spacingAndGlyphs'>Excitement (Q1)</text>
-<text x='124.27' y='199.07' text-anchor='end' style='font-size: 14.00px; font-weight: 500;fill: #4D4D4D; font-family: "Arial";' textLength='95.05px' lengthAdjust='spacingAndGlyphs'>Happiness (Q2)</text>
-<text x='124.27' y='97.46' text-anchor='end' style='font-size: 14.00px; font-weight: 500;fill: #4D4D4D; font-family: "Arial";' textLength='49.22px' lengthAdjust='spacingAndGlyphs'>Joy (Q3)</text>
+<text x='124.27' y='199.07' text-anchor='end' style='font-size: 14.00px; font-weight: 500;fill: #4D4D4D; font-family: "Arial";' textLength='49.22px' lengthAdjust='spacingAndGlyphs'>Joy (Q3)</text>
+<text x='124.27' y='97.46' text-anchor='end' style='font-size: 14.00px; font-weight: 500;fill: #4D4D4D; font-family: "Arial";' textLength='87.81px' lengthAdjust='spacingAndGlyphs'>Joy-Anger (Q2)</text>
 <text x='334.23' y='474.34' text-anchor='middle' style='font-size: 14.00px; font-weight: 500;fill: #4D4D4D; font-family: "Arial";' textLength='20.99px' lengthAdjust='spacingAndGlyphs'>0.0</text>
 <text x='542.03' y='474.34' text-anchor='middle' style='font-size: 14.00px; font-weight: 500;fill: #4D4D4D; font-family: "Arial";' textLength='20.99px' lengthAdjust='spacingAndGlyphs'>0.5</text>
 <text x='420.29' y='491.07' text-anchor='middle' style='font-size: 15.40px; font-weight: 500; font-family: "Arial";' textLength='62.11px' lengthAdjust='spacingAndGlyphs'>Variables</text>

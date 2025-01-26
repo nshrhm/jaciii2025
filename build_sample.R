@@ -2,7 +2,7 @@
 source("R/create_sample_data.R")
 
 # 言語設定 ("ja" または "en" を指定)
-lang <- "ja"
+lang <- "en"
 data_file <- "sample_data.csv"
 output_dir <- file.path("sample_output", lang)
 
