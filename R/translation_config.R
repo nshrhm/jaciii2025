@@ -54,13 +54,14 @@ TRANSLATIONS <- list(
       "model_error" = "モデルの推定中にエラーが発生しました: %s",
       "plot_creation_error" = "グラフの作成中にエラーが発生しました: %s",
       "visualization_error" = "分析結果の可視化中にエラーが発生しました: %s",
-      "save_error" = "ファイルの保存中にエラーが発生しました: %s"
+      "save_error" = "ファイルの保存中にエラーが発生しました: %s",
+      "influence_summary_error" = "影響度分析の結果作成中にエラーが発生しました: %s"
     ),
 
     # 質問項目（アンケートの各設問）
     "questions" = list(
       "Q1" = "ワクワク感",
-      "Q2" = "幸せ",
+      "Q2" = "怒り-喜び",
       "Q3" = "喜び",
       "Q4" = "怒り",
       "Q5" = "観覧意図"
@@ -125,7 +126,7 @@ TRANSLATIONS <- list(
     # 感情カテゴリーのラベル
     "emotion_categories" = list(
       "excitement" = "ワクワク感",
-      "joy_anger" = "喜び-怒り",
+      "anger_joy" = "喜び-怒り",
       "joy" = "喜び",
       "anger" = "怒り",
       "intention" = "観覧意図"
@@ -158,7 +159,7 @@ TRANSLATIONS <- list(
       "axis_variable" = "評価項目",
       "axis_std_coefficient" = "標準化係数",
       "excitement" = "ワクワク感 (Q1)",
-      "joy_anger" = "喜び-怒り (Q2)",
+      "anger_joy" = "怒り-喜び (Q2)",
       "joy" = "喜び (Q3)",
       "anger" = "怒り (Q4)",
       "intention" = "観覧意図 (Q5)"
@@ -179,13 +180,14 @@ TRANSLATIONS <- list(
       "model_error" = "Error occurred during model estimation: %s",
       "plot_creation_error" = "Error occurred while creating plot: %s",
       "visualization_error" = "Error occurred while visualizing analysis results: %s",
-      "save_error" = "Error occurred while saving file: %s"
+      "save_error" = "Error occurred while saving file: %s",
+      "influence_summary_error" = "Error occurred while creating influence analysis summary: %s"
     ),
 
     # Questions
     "questions" = list(
       "Q1" = "Excitement",
-      "Q2" = "Joy-Anger",
+      "Q2" = "Anger-Joy",
       "Q3" = "Joy",
       "Q4" = "Anger",
       "Q5" = "Viewing Intention"
@@ -250,7 +252,7 @@ TRANSLATIONS <- list(
     # Emotion Categories
     "emotion_categories" = list(
       "excitement" = "Excitement",
-      "joy_anger" = "Joy-Anger",
+      "anger_joy" = "Anger_Joy",
       "joy" = "Joy",
       "anger" = "Anger",
       "intention" = "Viewing Intention"
@@ -283,7 +285,7 @@ TRANSLATIONS <- list(
       "axis_variable" = "Variables",
       "axis_std_coefficient" = "Standardized Coefficient",
       "excitement" = "Excitement (Q1)",
-      "joy_anger" = "Joy-Anger (Q2)",
+      "anger_joy" = "Anger-Joy (Q2)",
       "joy" = "Joy (Q3)",
       "anger" = "Anger (Q4)",
       "intention" = "Viewing Intention (Q5)"
