@@ -84,14 +84,18 @@
 ## 必要なパッケージ
 
 以下のRパッケージが必要です：
-- tidyverse: データ処理と可視化
+- tidyverse: データ処理と可視化（ggplot2, dplyr, purrr, tibbleを含む）
 - ggbeeswarm: 分布プロットの作成
 - e1071: ファジィクラスタリング
 - scales: スケール変換
+- cluster: クラスタリング分析
+- car: 統計分析補助
+- Cairo: 高品質なグラフィックス出力
+- svglite: SVG形式での出力
 
 パッケージのインストールは以下のコマンドで行えます：
 ```R
-install.packages(c("tidyverse", "ggbeeswarm", "e1071", "scales"))
+install.packages(c("tidyverse", "ggbeeswarm", "e1071", "scales", "cluster", "car", "Cairo", "svglite"))
 ```
 
 ## アンインストール方法
