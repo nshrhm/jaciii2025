@@ -70,10 +70,13 @@ create_cluster_plot <- function(data, membership, centers, labels, lang = "ja") 
         scale_color_brewer(palette = "Set2") +
         theme_minimal(base_size = 14) +
         theme(
-          plot.title = element_text(size = rel(1.2), hjust = 0.5),
-          axis.title = element_text(size = rel(1.1)),
-          axis.text = element_text(size = rel(1.0)),
-          legend.position = "right",
+          plot.title = element_text(size = rel(1.6), hjust = 0.5),
+          axis.title = element_text(size = rel(1.6)),
+          axis.text = element_text(size = rel(1.6)),
+          legend.title = element_text(size = rel(1.6)),
+          legend.text = element_text(size = rel(1.1)),
+          legend.position = "bottom",
+          legend.box = "vertical",
           panel.grid.minor = element_blank()
         )
 
@@ -244,9 +247,9 @@ create_cluster_vas_plots <- function(data, cluster_info, plots_dir, lang = "ja",
             ) +
             theme_minimal(base_size = 14) +
             theme(
-              plot.title = element_text(size = rel(1.2), hjust = 0.5),
-              axis.title = element_text(size = rel(1.1)),
-              axis.text = element_text(size = rel(1.0)),
+              plot.title = element_text(size = rel(1.6), hjust = 0.5),
+              axis.title = element_text(size = rel(1.6)),
+              axis.text = element_text(size = rel(1.6)),
               axis.text.x = element_text(angle = 45, hjust = 1),
               panel.grid.minor = element_blank(),
               plot.margin = margin(t = 10, r = 10, b = 10, l = 10)
