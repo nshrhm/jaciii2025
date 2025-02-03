@@ -219,11 +219,18 @@ create_vas_plot <- function(data, lang = "ja", country_filter = NULL) {
       x = get_translation("x_label", "plot_labels", lang),
       y = get_translation("y_label", "plot_labels", lang)
     ) +
-    apply_common_theme(rotate_x_labels = TRUE)
+    apply_common_theme(rotate_x_labels = TRUE) +
+    theme(
+      text = element_text(size = 14),
+      axis.title = element_text(size = 20),
+      axis.text = element_text(size = 20),
+      plot.title = element_text(size = 18),
+      legend.title = element_text(size = 14),
+      legend.text = element_text(size = 14)
+    )
 
   return(p)
 }
-
 
 #' @title 国別VASプロットの作成
 #' @param data 長形式データ
@@ -235,7 +242,7 @@ create_vas_plots_comparison <- function(data, lang = "ja") {
     # バイオリンプロット
     geom_violin(
       position = position_dodge(width = 0.7),
-      alpha = 0.4,
+      alpha = 0.5,
       scale = "width",
       trim = TRUE
     ) +
@@ -243,7 +250,7 @@ create_vas_plots_comparison <- function(data, lang = "ja") {
     geom_boxplot(
       position = position_dodge(width = 0.7),
       width = 0.2,
-      alpha = 0.6,
+      alpha = 0.7,
       outlier.shape = NA # 外れ値は点プロットで表示するため非表示
     ) +
     # 個別データ点
@@ -252,9 +259,11 @@ create_vas_plots_comparison <- function(data, lang = "ja") {
         dodge.width = 0.7,
         jitter.width = 0.1
       ),
-      alpha = 0.2,
+      alpha = 0.3,
       size = 1
     ) +
+    # グレースケールの設定
+    scale_fill_grey(start = 0.4, end = 0.8) +
     # ラベル設定
     labs(
       title = get_translation("country_comparison", "plot_labels", lang),
@@ -267,7 +276,16 @@ create_vas_plots_comparison <- function(data, lang = "ja") {
       limits = c(0, 1.00),
       breaks = seq(0, 1.00, 0.20)
     ) +
-    apply_common_theme(rotate_x_labels = TRUE)
+    apply_common_theme(rotate_x_labels = TRUE) +
+    theme(
+      text = element_text(size = 14),
+      axis.title = element_text(size = 20),
+      axis.text = element_text(size = 20),
+      plot.title = element_text(size = 18),
+      legend.title = element_text(size = 14),
+      legend.text = element_text(size = 14),
+      legend.position = "bottom"
+    )
   return(p)
 }
 
@@ -281,19 +299,28 @@ perform_country_ttest <- function(data, lang = "ja") {
 
   t_results <- map_dfr(questions, function(q) {
     subset_data <- data %>% filter(question == q)
+
+    # Perform t-test
     t_test <- t.test(value ~ Country, data = subset_data)
 
+    # Calculate mean difference
+    means <- subset_data %>%
+      group_by(Country) %>%
+      summarise(mean = mean(value, na.rm = TRUE), .groups = "drop")
+    mean_diff <- diff(means$mean)
+
+    # Create results data frame
     tibble(
       question = q,
       t_statistic = t_test$statistic,
       p_value = t_test$p.value,
-      mean_diff = diff(t_test$estimate),
+      mean_diff = mean_diff,
       conf_low = t_test$conf.int[1],
       conf_high = t_test$conf.int[2]
     )
   })
 
-  # 列名の翻訳
+  # Rename columns according to language
   t_results <- t_results %>%
     rename(
       !!get_translation("x_label", "plot_labels", lang) := question,
