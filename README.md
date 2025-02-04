@@ -11,7 +11,7 @@
    git clone https://github.com/nshrhm/jaciii2025.git
    ```
    - ブラウザからダウンロード
-   　　　- GitHubの「Code」ボタン → 「Download ZIP」からZIPファイルをダウンロードして解凍
+      - GitHubの「Code」ボタン → 「Download ZIP」からZIPファイルをダウンロードして解凍
 
    - R環境でのインストール(非推奨)
    ```r
